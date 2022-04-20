@@ -813,6 +813,10 @@ div.hero{
     .navin{
         display: none;
     }
+    
+    #myNav{
+        display: none;
+    }
 
     main{
         display: grid;
