@@ -246,6 +246,10 @@ animation: animatedImage 3s linear infinite alternate;
     .view-sixth:hover a.info {
         transform: none;
     }
+
+    .hero{
+        background-attachment:local;
+    }
 }
 
 img:hover{
