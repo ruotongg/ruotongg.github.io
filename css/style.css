@@ -1,45 +1,3 @@
-/* pacifico-regular - latin */
-@font-face {
-    font-family: 'Pacifico';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/pacifico-v17-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/pacifico-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/pacifico-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/pacifico-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/pacifico-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/pacifico-v17-latin-regular.svg#Pacifico') format('svg'); /* Legacy iOS */
-}
-
-/* work-sans-regular - latin */
-@font-face {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/work-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/work-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/work-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/work-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/work-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/work-sans-v13-latin-regular.svg#WorkSans') format('svg'); /* Legacy iOS */
-}
-
-/* secular-one-regular - latin */
-@font-face {
-    font-family: 'Secular One';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/secular-one-v5-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/secular-one-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/secular-one-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/secular-one-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/secular-one-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/secular-one-v5-latin-regular.svg#SecularOne') format('svg'); /* Legacy iOS */
-}
-
 *{
     box-sizing: border-box;
 }
@@ -50,11 +8,12 @@
     height: 10px;
     margin: 5px;
     left: -500px;
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight: 700;
     font-size: 12px;
     color: ghostwhite;
     text-decoration: none;
-    background-color: black;
+    background-color: rgb(30,30,30);
 }
 
 .skip:focus{
@@ -63,8 +22,7 @@
 }
 
 div.head{
-    background-color: black;
-    background-image: url(../images/footer.png);
+    background-color: #5800FF;
     display: inline-flex;
     flex-direction: column;
     width: 100%;
@@ -78,7 +36,7 @@ nav{
 nav li{
     display: inline-block;
     width: 100%;
-    padding: 15px 0;
+    padding: 8px 0;
 }
 
 div.head p{
@@ -88,18 +46,17 @@ div.head p{
 
 div.head nav li a{
     text-decoration: none;
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
+    font-family: "Lucida Bright", Georgia, serif;
     color: lightgray;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 div.head nav li.active{
-    background-color: #FC28FB;
+    background-color: #5800FF;
 }
 
 div.head nav li.active a{
-    color: black;
-    font-style: italic;
+    color: whitesmoke;
 }
 
 
@@ -108,8 +65,7 @@ div.head nav li:hover a{
 }
 
 body{
-    background-color: #FDEBF7;
-    background: linear-gradient(#FDEBF7,40%, #acd8e2,70%, #FDEBF7);
+    background-color:  rgb(30,30,30);
 }
 
 main{
@@ -120,21 +76,21 @@ h1{
     font-size: 42px;
     color: #FC28FB;
     text-align: center;
-    font-family: "Pacifico", "Franklin Gothic Medium", Sans-serif;
+    font-family: "Lucida Bright", Georgia, serif;
 }
 
 h2{
-    font-size: 26px;
+    font-size: 20px;
     color: #FC28FB;
-    font-family: "Franklin Gothic Medium","Secular One", Sans-serif;
+    font-family: "Lucida Bright", Georgia, serif;
     padding: 20px 0;
-    background-color: white;
+    border-top: 1px solid gray;
 }
 
 h3{
-    font-size: 18px;
+    font-size: 16px;
     color: dimgray;
-    font-family: "Franklin Gothic Medium","Secular One", Sans-serif;
+    font-family: "Lucida Bright", Georgia, serif;
     text-transform: uppercase;
     font-weight: 400;
     padding: 10px 0;
@@ -147,18 +103,17 @@ div.seg-begin{
     margin: auto;
     margin-top: 20px;
     padding: 10px 20px 10px;
-    background-color: white;
-    border-radius: 10px;
 }
 
 
 div p{
-    line-height: 140%;
-    font-family: "Work Sans", "Calibri", Sans-serif;
-    font-size: 1em;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 0.9em;
     margin-bottom: 25px;
     display: inline-block;
-    color: black;
+    color: whitesmoke;
 }
 
 div p:last-child{
@@ -166,8 +121,8 @@ div p:last-child{
 }
 
 *::selection{
-    background-color: #FC28FB;
-    color: white;
+    background-color: #FFC600;
+    color: black;
 }
 
 
@@ -176,15 +131,12 @@ img{
     margin: 20px auto;
     padding: 3px;
     width: 100%;
-    border:dotted 2px #FBCAFF;
-    border-radius: 5px;
 }
 
 .gallery img{
     margin: 0;
     padding: 0;
     border:0;
-    border-radius: 0;
 }
 
 .intro img{
@@ -198,16 +150,6 @@ div.mid img{
     margin: 10px auto;
 }
 
-@keyframes animatedImage {
-    from {
-        opacity: 30%;
-        border-radius: 5px;
-    }
-    to {
-        opacity: 100%;
-        border-radius: 20px;
-    }
-}
 
 /*
 .gallery img:nth-child(even){
@@ -222,41 +164,9 @@ animation: animatedImage 3s linear infinite alternate;
     animation: none;
 }
     */
-
-    #snow-top-layer {
-        animation: none;
-    }
-
-    #snow-bottom-layer {
-        animation: none;
-    }
-
-    .flip-card:hover .flip-card-inner,
-    .flip-card:focus-within .flip-card-inner,
-    .flip-card:active .flip-card-inner,
-    .flip-card:focus .flip-card-inner{
-        transform: none;
-    }
-
-    .view-sixth:hover h2 {
-        transform: none;
-    }
-
-    .view-sixth:hover p {
-        transform: none;
-    }
-
-    .view-sixth:hover a.info {
-        transform: none;
-    }
-
     .hero{
         background-attachment:local;
     }
-}
-
-img:hover{
-    border:solid 2px #FC28FB;
 }
 
 div.pic{
@@ -304,18 +214,19 @@ audio{
 
 label{
     display: block;
-    font-family: "Work Sans", "Calibri", Sans-serif;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 14px;
+    color: whitesmoke;
     padding-top: 20px;
     padding-bottom: 5px;
     text-align: left;
 }
 
 input, textarea{
-    font-family: "Work Sans", "Calibri", Sans-serif;
-    width: 100%;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    width: 80%;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid dimgray;
     border-radius: 10px;
     box-sizing: border-box;
     margin: 10px 0;
@@ -323,8 +234,8 @@ input, textarea{
 }
 
 input[type=submit]{
-    font-family: "Franklin Gothic Medium","Secular One", Sans-serif;
-    background-color: #FDEBF7;
+    font-family: "Lucida Bright", Georgia, serif;
+    background-color: #FFC600;
     color: black;
     font-size: 16px;
     cursor: pointer;
@@ -346,36 +257,35 @@ div.social span{
 
 div.social a{
     font-size: 14px;
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
-    font-family: "Work Sans", "Calibri", Sans-serif;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 
 div a:visited{
-    color: black;
+    color: whitesmoke;
 }
 
 div a:hover{
     text-decoration: underline;
-    color: #FC28FB;
 }
 
 footer{
     text-align: right;
     text-transform: uppercase;
     padding: 60px 20px 30px;
-    background-color: black;
-    background-image: url(../images/footer.png);
+    background-color: #5800FF;
 
 }
 
 footer p{
-    color: white;
+    color: whitesmoke;
     font-style: italic;
     margin-right: 30px;
-    font-family: "Franklin Gothic Medium","Secular One",  Sans-serif;
-    font-size: 1.5em;
+    font-family: "Lucida Bright", Georgia, serif;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 div.hero{
@@ -383,11 +293,9 @@ div.hero{
 }
 
 .hero {
-    background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    min-height: 30rem;
+    min-height: 10rem;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -401,116 +309,31 @@ div.hero{
     padding: 3rem 0;
 }
 
-.snow {
-    position: absolute;
-    min-width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.snow .svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#snow-top-layer {
-    will-change: transform;
-    transform: translateY(-768px);
-    animation: fall 22.5s infinite linear;
-}
-
-#snow-bottom-layer {
-    will-change: transform;
-    transform: translateY(-768px);
-    animation: fall 45s infinite linear;
-}
-
-@keyframes fall {
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-.view {
-    width: 300px;
-    height: 220px;
-    margin: 10px;
-    border: 10px solid ghostwhite;
-    padding-top:0;
+.typing {
+    margin-top: 30px;
+    width: 22.5em;
+    font-size: 0.9em;
+    height: 2em;
+    border-right: 1px solid transparent;
+    animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
+    word-break: break-all;
     overflow: hidden;
-    position: relative;
-    text-align: center;
-    -webkit-box-shadow: 1px 1px 2px #e6e6e6;
-    -moz-box-shadow: 1px 1px 2px #e6e6e6;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-}
-.view .mask{
-    width: auto;
-    height: 220px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
 }
 
-.view img {
-    display: block;
-    position: relative;
-    object-fit: cover;
+@keyframes typing {
+    from { width: 0; }
+    to { width: 22.5em; }
 }
 
-.view h2 {
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0;
-}
-.view p {
-    font-family: "Work Sans", "Calibri", Sans-serif;
-    font-style: italic;
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 15px 0;
-    text-align: center;
-}
-.view a.info {
-    display: inline-block;
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
-    text-decoration: none;
-    padding: 7px 14px;
-    margin:0;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    -webkit-box-shadow: 0 0 1px #000;
-    -moz-box-shadow: 0 0 1px #000;
-    box-shadow: 0 0 1px #000;
-}
-.view a.info:hover {
-    -webkit-box-shadow: 0 0 5px #000;
-    -moz-box-shadow: 0 0 5px #000;
-    box-shadow: 0 0 5px #000;
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: currentColor; }
 }
 
 @media screen and (min-width: 500px){
     img{
         margin: 0 10px 10px;
         padding: 3px 5px;
-        border:dotted 2px #FBCAFF;
-        border-radius: 5px;
     }
 
 
@@ -525,151 +348,14 @@ div.hero{
         grid-column: 1/2;
     }
 
-    div.pic img, div.pic .flip-card{
+    div.pic img{
         grid-column: 2/3;
-    }
-
-    .view {
-        width: 45%;
-    }
-    .view .mask{
-        width: 100%;
     }
 
     nav li{
         width: 19%;
     }
 }
-
-.view-sixth img {
-    -webkit-transition: all 0.4s ease-in-out 0.5s;
-    -moz-transition: all 0.4s ease-in-out 0.5s;
-    -o-transition: all 0.4s ease-in-out 0.5s;
-    -ms-transition: all 0.4s ease-in-out 0.5s;
-    transition: all 0.4s ease-in-out 0.5s;
-}
-.view-sixth .mask {
-    background-color: rgba(55,82,161,0.5);
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-in 0.4s;
-    -moz-transition: all 0.3s ease-in 0.4s;
-    -o-transition: all 0.3s ease-in 0.4s;
-    -ms-transition: all 0.3s ease-in 0.4s;
-    transition: all 0.3s ease-in 0.4s;
-}
-.view-sixth h2 {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    background: transparent;
-    margin: 20px 40px 0px 40px;
-    -webkit-transform: scale(10);
-    -moz-transform: scale(10);
-    -o-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-    -webkit-transition: all 0.3s ease-in-out 0.1s;
-    -moz-transition: all 0.3s ease-in-out 0.1s;
-    -o-transition: all 0.3s ease-in-out 0.1s;
-    -ms-transition: all 0.3s ease-in-out 0.1s;
-    transition: all 0.3s ease-in-out 0.1s;
-}
-.view-sixth p {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    -webkit-transform: scale(10);
-    -moz-transform: scale(10);
-    -o-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-    -webkit-transition: all 0.3s ease-in-out 0.2s;
-    -moz-transition: all 0.3s ease-in-out 0.2s;
-    -o-transition: all 0.3s ease-in-out 0.2s;
-    -ms-transition: all 0.3s ease-in-out 0.2s;
-    transition: all 0.3s ease-in-out 0.2s;
-}
-.view-sixth a.info {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    -webkit-transition: all 0.3s ease-in-out 0.1s;
-    -moz-transition: all 0.3s ease-in-out 0.1s;
-    -o-transition: all 0.3s ease-in-out 0.1s;
-    -ms-transition: all 0.3s ease-in-out 0.1s;
-    transition: all 0.3s ease-in-out 0.1s;
-}
-.view-sixth:hover .mask {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    transition-delay: 0s;
-}
-.view-sixth:hover img {
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    transition-delay: 0s;
-}
-.view-sixth:hover h2 {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition-delay: 0.1s;
-    -moz-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    -ms-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-}
-.view-sixth:hover p {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    -ms-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-}
-.view-sixth:hover a.info {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-transition-delay: 0.3s;
-    -moz-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    -ms-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-}
-
 
 .overlay {
     height: 0%;
@@ -678,7 +364,6 @@ div.hero{
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,24,102, 0.9);
     overflow-y: hidden;
     transition: 0.5s;
@@ -694,7 +379,7 @@ div.hero{
 }
 
 .overlay a {
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
+    font-family: "Lucida Bright", Georgia, serif;
     padding: 8px;
     text-decoration: none;
     font-size: 24px;
@@ -753,7 +438,6 @@ div.hero{
 
 .navin p:hover{
     color: whitesmoke;
-    background-color: dimgray;
 }
 
 #toc{
@@ -775,19 +459,20 @@ div.hero{
 }
 
 #toc a{
-    font-family: "Franklin Gothic Medium", "Secular One", Sans-serif;
+     font-family: "Lucida Bright", Georgia, serif;
+    font-weight: 700;
+    font-size: 12px;
     text-decoration: none;
     color: #919191;
     font-style: italic;
 }
 
 #toc a.active {
-    color: black;
-    text-decoration: underline;
+    color: white;
 }
 
 #toc a:hover {
-    color: #FC28FB;
+    text-decoration: underline;
 }
 
 #toc img{
@@ -803,7 +488,7 @@ div.hero{
     nav li{
         display: inline-block;
         width: 120px;
-        padding: 15px 0;
+        padding: 8px 0;
     }
 
     .hero{
@@ -813,7 +498,7 @@ div.hero{
     .navin{
         display: none;
     }
-    
+
     #myNav{
         display: none;
     }
@@ -843,7 +528,7 @@ div.hero{
 
     #comment img:first-child{
         padding: 0;
-        border: solid 2px white;
+        border: solid 2px #5800FF;
         border-radius: 30px;
         bottom: 0;
         opacity:100%;
@@ -852,7 +537,7 @@ div.hero{
     #comment img{
         padding: 0;
         border: 0;
-        opacity: 90%;
+        opacity: 20%;
         grid-column: 2/3;
         grid-row:1/2;
     }
@@ -863,6 +548,7 @@ div.hero{
         grid-row:1/2;
         margin-left: 20%;
         width: 80%;
+        color: #FFC600;
         align-self: center;
         text-align: center;
         font-size: 0.7em;
@@ -883,7 +569,7 @@ div.hero{
     }
 
 
-    div.pic img, div.pic .flip-card{
+    div.pic img{
         grid-column: 1/2;
     }
 
@@ -905,7 +591,7 @@ div.hero{
         display: inline;
         width: auto;
         color: #FDEBF7;
-        font-family: "Pacifico", "Franklin Gothic Medium", Sans-serif;
+        font-family: "Lucida Bright", Georgia, serif;
         margin-bottom: 0;
         margin-left: 20px;
     }
@@ -915,51 +601,4 @@ div.hero{
     }
 
 
-}
-
-.flip-card {
-    background-color: transparent;
-    height: 400px;
-    width: 300px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    margin: auto 0;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus-within .flip-card-inner,
-.flip-card:active .flip-card-inner,
-.flip-card:focus .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: transparent;
-}
-
-.flip-card-back {
-    background-color: rgb(55,82,161);
-    padding: 50px 20px;
-    transform: rotateY(180deg);
-}
-
-.flip-card-back p{
-    color: white;
-    font-size: 12px;
 }
