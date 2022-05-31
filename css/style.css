@@ -89,9 +89,8 @@ h2{
 
 h3{
     font-size: 16px;
-    color: dimgray;
+    color: lightgray;
     font-family: "Lucida Bright", Georgia, serif;
-    text-transform: uppercase;
     font-weight: 400;
     padding: 10px 0;
 }
@@ -120,28 +119,35 @@ div p:last-child{
     margin-bottom: 40px;
 }
 
+div p a{
+    color:#FFC600;
+    text-decoration: none;
+}
+
+div p a:visited{
+    color:#FFC600;
+}
+
+div p a:hover{
+    text-decoration: underline;
+}
+
 *::selection{
     background-color: #FFC600;
     color: black;
 }
 
+italic{
+    font-style: italic;
+    color:lightgray;
+}
 
 img{
     display:block;
     margin: 20px auto;
     padding: 3px;
     width: 100%;
-}
-
-.gallery img{
-    margin: 0;
-    padding: 0;
-    border:0;
-}
-
-.intro img{
-    height: 100%;
-    width: auto;
+    border-radius: 7px;
 }
 
 div.mid img{
@@ -150,6 +156,10 @@ div.mid img{
     margin: 10px auto;
 }
 
+a img{
+    width: 40px;
+    margin-bottom: 0;
+}
 
 /*
 .gallery img:nth-child(even){
@@ -174,13 +184,8 @@ div.pic{
     grid-template-columns: 2fr 1fr;
 }
 
-div.pic p,div.pic img, div.pic h2, div.pic .flip-card{
+div.pic p,div.pic img, div.pic h2{
     grid-column: 1/-1;
-}
-
-div.pic .flip-card{
-    height: 400px;
-    padding-bottom: 20px;
 }
 
 
@@ -205,8 +210,8 @@ audio{
 }
 
 #overlay{
-    max-width: 900px;
-    min-width: 200px;
+    max-width: 600px;
+    min-width: 300px;
     margin: auto;
     padding-top: 10px;
 }
@@ -217,19 +222,19 @@ label{
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 14px;
     color: whitesmoke;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 5px;
     text-align: left;
 }
 
 input, textarea{
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    width: 80%;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
     border: 1px solid dimgray;
     border-radius: 10px;
     box-sizing: border-box;
-    margin: 10px 0;
+    margin: 5px 0;
     resize: vertical;
 }
 
@@ -239,13 +244,13 @@ input[type=submit]{
     color: black;
     font-size: 16px;
     cursor: pointer;
-    padding: 15px;
-    height: 50px;
+    padding: 10px;
+    height: 40px;
 }
 
 div.social{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     column-gap: 20px;
 }
 
@@ -255,11 +260,13 @@ div.social span{
     vertical-align:middle;  
 }
 
-div.social a{
+div.social a, div.social p{
     font-size: 14px;
     color: whitesmoke;
+    margin: 5px 0;
     text-decoration: none;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-style: normal;
 }
 
 
@@ -274,9 +281,8 @@ div a:hover{
 footer{
     text-align: right;
     text-transform: uppercase;
-    padding: 60px 20px 30px;
+    padding: 30px 20px 30px;
     background-color: #5800FF;
-
 }
 
 footer p{
@@ -286,6 +292,25 @@ footer p{
     font-family: "Lucida Bright", Georgia, serif;
     font-weight: 700;
     font-size: 1em;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+footer>p:last-child{
+    margin-top: 50px;
+    color: lightgray;
+}
+
+#contact{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    text-transform: none;
+    text-align: left;
+}
+
+#mywork span{
+    color: #FFC600;
 }
 
 div.hero{
@@ -311,9 +336,9 @@ div.hero{
 
 .typing {
     margin-top: 30px;
-    width: 22.5em;
-    font-size: 0.9em;
-    height: 2em;
+    width: 20em;
+    font-size: 1em;
+    height: 1.6em;
     border-right: 1px solid transparent;
     animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
     word-break: break-all;
@@ -322,7 +347,7 @@ div.hero{
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 22.5em; }
+    to { width: 20em; }
 }
 
 @keyframes blink-caret {
@@ -357,89 +382,6 @@ div.hero{
     }
 }
 
-.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,24,102, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
-    padding: 0;
-}
-
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a {
-    font-family: "Lucida Bright", Georgia, serif;
-    padding: 8px;
-    text-decoration: none;
-    font-size: 24px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.overlay a:visited {
-    color:  #818181;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
-.navin{
-    position: fixed;
-    margin-bottom: 0;
-    padding: 0;
-    bottom:15px;
-    right: 15px;
-    font-size:15px;
-    cursor:pointer;
-    z-index: 1;
-    text-align: center;
-}
-
-.navin p:last-child{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 5px;
-    color: dimgray;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    border:solid 1px dimgray;
-    border-radius:20px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.navin p:hover{
-    color: whitesmoke;
-}
-
 #toc{
     display: none;
     position: sticky;
@@ -459,7 +401,7 @@ div.hero{
 }
 
 #toc a{
-     font-family: "Lucida Bright", Georgia, serif;
+    font-family: "Lucida Bright", Georgia, serif;
     font-weight: 700;
     font-size: 12px;
     text-decoration: none;
@@ -493,14 +435,6 @@ div.hero{
 
     .hero{
         background-attachment: fixed;
-    }
-
-    .navin{
-        display: none;
-    }
-
-    #myNav{
-        display: none;
     }
 
     main{
@@ -600,5 +534,11 @@ div.hero{
         display: inline;
     }
 
-
+    #contact{
+        flex-direction: row;
+        margin-left: 25%;
+        margin-right: 15%;
+        text-transform: none;
+        text-align: left;
+    }
 }
