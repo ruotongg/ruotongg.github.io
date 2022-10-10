@@ -28,6 +28,10 @@ div.head{
     width: 100%;
 }
 
+div.head img{
+    margin: 0 auto;
+}
+
 nav{
     text-align: center;
 
@@ -95,6 +99,10 @@ h3{
     padding: 10px 0;
 }
 
+h2, h3{
+    line-height: 120%;
+}
+
 div.seg-begin{
     min-width: 200px;
     max-width: 1000px;
@@ -104,25 +112,24 @@ div.seg-begin{
     padding: 10px 20px 10px;
 }
 
-div p{
+div p, div.seg-begin li{
     line-height: 160%;
     letter-spacing: 0.5px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 0.9em;
     margin-bottom: 25px;
-    display: inline-block;
     color: whitesmoke;
 }
 
-div.seg-begin p{
-    padding-left: 20px;
+div.seg-begin li{
+    margin-bottom: 10px;
 }
 
-div p:last-child{
+div.seg-begin p:last-child, div.seg-begin li:last-child{
     margin-bottom: 40px;
 }
 
-div p a{
+div p a, div li a{
     color:#FFC600;
     text-decoration: none;
 }
@@ -133,6 +140,17 @@ div p a:visited{
 
 div p a:hover{
     text-decoration: underline;
+}
+
+div.seg-begin h2 p{
+    display: inline;
+    font-size: 0.6em;
+    font-family: "Lucida Bright", Georgia, serif;
+    background-color: #5800FF;
+    padding: 3px;
+    border-radius: 10px;
+    vertical-align: middle;
+    margin-left: 15px;
 }
 
 *::selection{
@@ -272,11 +290,6 @@ div.social a, div.social p{
     font-style: normal;
 }
 
-
-div a:visited{
-    color: whitesmoke;
-}
-
 div a:hover{
     text-decoration: underline;
 }
@@ -382,6 +395,10 @@ div.hero{
 
     nav li{
         width: 19%;
+    }
+
+    div.seg-begin p, div.seg-begin li{
+        padding-left: 20px;
     }
 }
 
@@ -518,7 +535,6 @@ div.hero{
 
     div.head{
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
         width: 100%;
     }
@@ -542,5 +558,11 @@ div.hero{
         margin-right: 15%;
         text-transform: none;
         text-align: left;
+    }
+
+
+    #keywords>ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
     }
 }
