@@ -352,7 +352,7 @@ div.hero{
 
 .typing {
     margin-top: 30px;
-    width: 20em;
+    width: 18em;
     font-size: 1em;
     height: 1.6em;
     border-right: 1px solid transparent;
@@ -363,7 +363,7 @@ div.hero{
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 20em; }
+    to { width: 18em; }
 }
 
 @keyframes blink-caret {
