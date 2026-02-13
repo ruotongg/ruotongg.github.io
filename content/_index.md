@@ -62,13 +62,15 @@ sections:
       order: desc
     design:
       view: card
-      columns: 3
+      columns: 1
       background:
         color:
           light: "#f5f5f5"
           dark: "#08080c"
       spacing:
-        padding: ["2rem", "0", "2rem", "0"]
+        padding: ["1rem", "0", "1rem", "0"]
+      show_read_time: false
+      show_read_more: false
   
   
   # # News Timeline
@@ -214,28 +216,8 @@ sections:
   #         dark: "#08080c"
   #     spacing:
   #       padding: ["4rem", "0", "4rem", "0"]
-  
-  # Contact Section
-  - block: contact-info
-    id: contact
-    content:
-      title: Get In Touch
-      subtitle: "Let's build something amazing together"
-      text: |-
-        I'm always interested in hearing about new projects and opportunities.
-        Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
-      email: ruotongg@umd.edu
-      autolink: true
-    design:
-      columns: '1'
-      background:
-        color:
-          light: "#ffffff"
-          dark: "#0d0d12"
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
-  
-  # CTA Card
+
+    # CV Card
   - block: cta-card
     id: cv
     content:
@@ -257,4 +239,25 @@ sections:
           dark: "#08080c"
       spacing:
         padding: ["4rem", "0", "6rem", "0"]
+
+  # Contact Section
+  - block: contact-info
+    id: contact
+    content:
+      title: Get In Touch
+      subtitle: "Let's build something amazing together"
+      text: |-
+        I'm always interested in hearing about new projects and opportunities.
+        Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
+      email: ruotongg@umd.edu
+      autolink: true
+    design:
+      columns: '1'
+      background:
+        color:
+          light: "#ffffff"
+          dark: "#0d0d12"
+      spacing:
+        padding: ["4rem", "0", "4rem", "0"]
+  
 ---

@@ -22,7 +22,7 @@ links:
     url: https://weathernow-demo.netlify.app
     label: Demo
 featured: false
-status: "Live"
+status: "Ongoing"
 role: "Solo Developer"
 duration: "3 weeks"
 team_size: 1
