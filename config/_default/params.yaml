@@ -31,7 +31,7 @@ hugoblox:
     style: minimal
     language_switcher: true
   copyright:
-    notice: © {year} {name}
+    notice: © {2026} {Ruotong Gao}
   content:
     math:
       enable: false
