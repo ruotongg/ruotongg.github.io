@@ -58,7 +58,7 @@
     {{ $sitems := newScratch }}
     {{ $sitems.Set "items" $items }}
     {{ $sitems.Set "blockContent" $blockContent }}
-    {{ $fromSection := false }}
+    {{ $sitems.Set "fromSection" false }}
     {{ if eq (len $items) 0 }}
       {{ $sections := .Page.Params.sections | default .Params.sections }}
       {{ range $i, $sec := $sections }}
@@ -74,10 +74,9 @@
       {{ end }}
       {{ $items = $sitems.Get "items" }}
       {{ if eq (len $items) 0 }}
-        {{ $newsSection := .Site.GetPage "section" "news" }}
-        {{ if $newsSection }}
+        {{ $newsSection := site.GetPage "section" "news" }}
+        {{ if and $newsSection (gt (len $newsSection.Pages) 0) }}
           {{ $sitems.Set "fromSection" true }}
-          {{ $fromSection = true }}
         {{ end }}
       {{ end }}
     {{ end }}
@@ -85,9 +84,10 @@
     {{ $items = $sitems.Get "items" }}
     {{ $blockContent = $sitems.Get "blockContent" }}
     {{ $count = default (len $items) (index $blockContent "count") }}
+    {{ $fromSection := $sitems.Get "fromSection" }}
 
     {{ if $fromSection }}
-      {{ $newsSection := .Site.GetPage "section" "news" }}
+      {{ $newsSection := site.GetPage "section" "news" }}
       {{ $newsPages := $newsSection.Pages.ByDate.Reverse }}
       {{ $count = default 5 (index $blockContent "count") }}
       {{ if gt (len $newsPages) 0 }}
