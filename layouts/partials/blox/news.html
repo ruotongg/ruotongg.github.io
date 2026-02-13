@@ -1,0 +1,127 @@
+{{/*
+  Simple News block partial
+  - Expects `.Content` front matter structure under the block in page bundles
+  - Supports `content.items` array and `content.count` to limit visible items
+  - If number of items > count, shows an archive link to `content.archive.link` (optional)
+*/}}
+{{/* Gather optional background colors from the section design so the block follows light/dark theme colors */}}
+{{ $secID := cond (isset . "Params") (or .Params.id "news") "news" }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "bgLight" "" }}
+{{ $scratch.Set "bgDark" "" }}
+{{/* Try block-level design first (wcBlock or Params) */}}
+{{ $maybeDesign := index (cond (isset . "wcBlock") (index .wcBlock "design") .Params) "design" }}
+{{ if $maybeDesign }}
+  {{ with index $maybeDesign "background" }}
+    {{ with index . "color" }}
+      {{ $scratch.Set "bgLight" (index . "light") }}
+      {{ $scratch.Set "bgDark" (index . "dark") }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{/* If not set, look up the page sections for the matching id */}}
+{{ if eq ($scratch.Get "bgLight") "" }}
+  {{ $sections := .Page.Params.sections | default .Params.sections }}
+  {{ range $i, $sec := $sections }}
+    {{ if eq (index $sec "id") $secID }}
+      {{ with index $sec "design" }}
+        {{ with index . "background" }}
+          {{ with index . "color" }}
+            {{ $scratch.Set "bgLight" (index . "light") }}
+            {{ $scratch.Set "bgDark" (index . "dark") }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ break }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $bgLight := $scratch.Get "bgLight" }}
+{{ $bgDark := $scratch.Get "bgDark" }}
+<section id="{{ with .Params.id }}{{ . }}{{ else }}news{{ end }}" class="hb-news-block"{{ if or $bgLight $bgDark }} style="--color-bg: {{ if $bgLight }}{{ $bgLight }}{{ else }}#ffffff{{ end }}; --color-bg-dark: {{ if $bgDark }}{{ $bgDark }}{{ else }}#0d0d12{{ end }};"{{ end }}>
+  {{ partial "blox/news-styles.html" . }}
+  <div class="hb-container">
+    {{/* Support both HugoBlox `wcBlock` input and direct page Params */}}
+    {{ $blockContent := cond (isset . "wcBlock") (index .wcBlock "content") .Params.content }}
+    {{ $title := index $blockContent "title" }}
+    {{ $subtitle := index $blockContent "subtitle" }}
+    <div class="text-center mb-12">
+      {{ with $title }}<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">{{ . }}</h2>{{ end }}
+      {{ with $subtitle }}<p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ . }}</p>{{ end }}
+    </div>
+
+    {{ $items := default (slice) (index $blockContent "items") }}
+    {{ $count := default (len $items) (index $blockContent "count") }}
+
+    {{/* Fallback: if items empty, try to read from page sections by id */}}
+    {{ $sitems := newScratch }}
+    {{ $sitems.Set "items" $items }}
+    {{ $sitems.Set "blockContent" $blockContent }}
+    {{ if eq (len $items) 0 }}
+      {{ $sections := .Page.Params.sections | default .Params.sections }}
+      {{ range $i, $sec := $sections }}
+        {{ if eq (index $sec "id") (or .Params.id "news") }}
+          {{ $secContent := index $sec "content" }}
+          {{ $secItems := default (slice) (index $secContent "items") }}
+          {{ if gt (len $secItems) 0 }}
+            {{ $sitems.Set "items" $secItems }}
+            {{ $sitems.Set "blockContent" $secContent }}
+            {{/* stop iterating */}}
+            {{ break }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $items = $sitems.Get "items" }}
+    {{ $blockContent = $sitems.Get "blockContent" }}
+    {{ $count = default (len $items) (index $blockContent "count") }}
+
+    {{ if gt (len $items) 0 }}
+      <div class="hb-news-grid">
+        {{ range $i, $item := $items }}
+          {{ if lt $i $count }}
+            <div class="hb-news-item">
+              <div class="hb-news-row">
+                {{/* Date */}}
+                {{ $s := newScratch }}
+                {{/* Prefer single `date` field, fallback to `date_start` for compatibility */}}
+                {{ $dateVal := cond (isset $item "date") (index $item "date") (index $item "date_start") }}
+                {{ with $dateVal }}
+                  {{ if gt (len (findRE `^\d{4}-\d{2}-\d{2}$` .)) 0 }}
+                    {{ $s.Set "date" (time .) }}
+                  {{ else }}
+                    {{ $s.Set "dateRaw" . }}
+                  {{ end }}
+                {{ end }}
+
+                <div class="hb-news-date">
+                  {{ if $s.Get "date" }}{{ ($s.Get "date").Format "Jan 2006" }}{{ else if $s.Get "dateRaw" }}{{ $s.Get "dateRaw" }}{{ end }}
+                </div>
+
+                {{/* Description */}}
+                <div class="hb-news-desc">{{ $item.description | markdownify }}</div>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{/* Archive link if overflow */}}
+      {{ if gt (len $items) $count }}
+        <div class="hb-news-archive">
+          {{ $archive := index $blockContent "archive" }}
+          {{ if (and $archive (index $archive "link")) }}
+            <a class="hb-news-archive-link" href="{{ index $archive "link" }}">{{ or (index $archive "text") "Browse all news" }}</a>
+          {{ else }}
+            <a class="hb-news-archive-link" href="/news/">{{ or (index $archive "text") "Browse all news" }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+
+    {{ else }}
+      <p class="hb-news-empty">No news yet.</p>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,47 @@
+<style>
+/* Theme-aware variables with sensible fallbacks */
+:root{
+	--hb-card-border: var(--card-border, rgba(0,0,0,0.04));
+	--hb-card-shadow-color: var(--card-shadow-color, rgba(17,24,39,0.04));
+	--hb-heading-color: var(--color-heading, var(--color-fg, #111827));
+}
+/* Base (light) */
+.hb-news-block{padding:3rem 1rem;background:var(--color-bg,#ffffff)}
+.hb-container{max-width:900px;margin:0 auto}
+.hb-news-title{font-size:2rem;margin-bottom:.25rem;font-weight:700;text-align:center}
+.hb-news-subtitle{margin-bottom:1.25rem;text-align:center}
+.hb-news-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.hb-news-item{background:var(--card-bg,#ffffff);padding:1rem;border-radius:10px;border:1px solid var(--hb-card-border);box-shadow:0 4px 12px var(--hb-card-shadow-color)}
+.hb-news-row{display:flex;align-items:flex-start;gap:1rem}
+.hb-news-date{font-size:.95rem;color:var(--muted,#6b7280);flex:0 0 140px;min-width:120px;text-align:left;white-space:nowrap}
+.hb-news-desc{flex:1;margin:0;color:inherit;line-height:1.6;text-align:left}
+.hb-news-desc p{margin:0}
+.hb-news-archive{text-align:right;margin-top:1rem}
+.hb-news-archive-link{color:var(--link,#1f6feb);font-weight:600}
+.hb-news-empty{color:var(--muted,#6b7280)}
+
+/* Dark mode: support both class-based toggling and prefers-color-scheme */
+.dark .hb-news-block,
+@media (prefers-color-scheme: dark) .hb-news-block {
+	background: var(--color-bg-dark, var(--color-bg, #0d0d12));
+	color: var(--color-fg-dark, #ffffff);
+}
+.dark .hb-news-item,
+@media (prefers-color-scheme: dark) .hb-news-item {
+	background: var(--card-bg-dark, var(--card-bg, #0b0b0d));
+	border-color: var(--hb-card-border-dark, rgba(255,255,255,0.06));
+	box-shadow: 0 4px 12px var(--hb-card-shadow-color-dark, rgba(0,0,0,0.4));
+}
+.dark .hb-news-title,
+@media (prefers-color-scheme: dark) .hb-news-title {
+	color: var(--hb-heading-color-dark, var(--color-heading, var(--color-fg-dark, #ffffff)));
+}
+.dark .hb-news-date,
+@media (prefers-color-scheme: dark) .hb-news-date {
+	color: var(--muted-dark, #9ca3af);
+}
+.dark .hb-news-archive-link,
+@media (prefers-color-scheme: dark) .hb-news-archive-link {
+	color: var(--link-dark, #60a5fa);
+}
+</style>

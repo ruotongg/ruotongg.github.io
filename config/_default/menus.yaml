@@ -11,11 +11,11 @@ main:
     identifier: c75c884d
     url: /#research
     weight: 20
-  - name: CV
-    identifier: 825be82c
-    url: /#cv
-    weight: 30
   - name: Contact
     identifier: b28abf10
     url: /#contact
     weight: 40
+  - name: CV
+    identifier: 825be82c
+    url: /#cv
+    weight: 30

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section id="news" class="hb-news-block">
+  {{ partial "blox/news-styles.html" . }}
+
+  <div class="hb-container">
+    <h1 class="hb-news-title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="hb-news-subtitle">{{ . }}</p>{{ end }}
+
+    <div class="hb-news-grid">
+      {{ range .Pages.ByDate.Reverse }}
+        <div class="hb-news-item">
+          <div class="hb-news-row">
+            <div class="hb-news-date">{{ .Date.Format "Jan 2006" }}</div>
+            <div class="hb-news-desc">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
