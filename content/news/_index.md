@@ -1,4 +1,4 @@
 ---
 title: News
-view: card
+view: article-grid
 ---
