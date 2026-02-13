@@ -20,28 +20,28 @@
 .hb-news-archive-link{color:var(--link,#1f6feb);font-weight:600}
 .hb-news-empty{color:var(--muted,#6b7280)}
 
-/* Dark mode: support both class-based toggling and prefers-color-scheme */
+/* Dark mode: .dark is applied by HugoBlox theme toggle (e.g. on <html>) */
 .dark .hb-news-block,
-@media (prefers-color-scheme: dark) .hb-news-block {
-	background: var(--color-bg-dark, var(--color-bg, #0d0d12));
-	color: var(--color-fg-dark, #ffffff);
+[data-theme="dark"] .hb-news-block {
+	background: var(--color-bg-dark, var(--color-bg, #0d0d12)) !important;
+	color: var(--color-fg-dark, #e5e7eb);
 }
 .dark .hb-news-item,
-@media (prefers-color-scheme: dark) .hb-news-item {
-	background: var(--card-bg-dark, var(--card-bg, #0b0b0d));
-	border-color: var(--hb-card-border-dark, rgba(255,255,255,0.06));
+[data-theme="dark"] .hb-news-item {
+	background: var(--card-bg-dark, #18181b) !important;
+	border-color: var(--hb-card-border-dark, rgba(255,255,255,0.08));
 	box-shadow: 0 4px 12px var(--hb-card-shadow-color-dark, rgba(0,0,0,0.4));
 }
 .dark .hb-news-title,
-@media (prefers-color-scheme: dark) .hb-news-title {
-	color: var(--hb-heading-color-dark, var(--color-heading, var(--color-fg-dark, #ffffff)));
+[data-theme="dark"] .hb-news-title {
+	color: var(--hb-heading-color-dark, #fafafa);
 }
 .dark .hb-news-date,
-@media (prefers-color-scheme: dark) .hb-news-date {
-	color: var(--muted-dark, #9ca3af);
+[data-theme="dark"] .hb-news-date {
+	color: var(--muted-dark, #a1a1aa);
 }
 .dark .hb-news-archive-link,
-@media (prefers-color-scheme: dark) .hb-news-archive-link {
+[data-theme="dark"] .hb-news-archive-link {
 	color: var(--link-dark, #60a5fa);
 }
 </style>
