@@ -2,35 +2,30 @@ schema: "hugoblox/author/v1"
 slug: "me"
 is_owner: true
 name:
-  display: "Ruotong Gao's Personal Website"
-  given: "Alex"
-  family: "Johnson"
+  display: "Ruotong Gao"
+  given: "Ruotong"
+  family: "Gao"
 postnominals: []
 status:
-  icon: "💻"
-role: "Full-Stack Developer"
-email: "alex@example.com"
-bio: "Full-stack developer with 5+ years of experience building scalable web applications.
-
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.\n"
+  icon: ""
+role: "PhD Student in Information"
+email: "ruotongg@umd.edu"
+bio: "PhD student in Information at the University of Maryland College Park, advised by Dr. Stephanie Valencia.\n Passionate about assistive technology, participatory design, and cross-ability collaboration.\n"
 affiliations:
-  - name: "Tech Corp"
-    url: "https://techcorp.example.com"
+  - name: "University of Maryland College Park"
+    url: "https://www.umd.edu"
 links:
   - icon: "at-symbol"
-    url: "mailto:alex@example.com"
+    url: "mailto:ruotongg@umd.edu"
     label: "E-mail Me"
   - icon: "brands/github"
-    url: "https://github.com/alexjohnson"
+    url: "https://github.com/ruotongg"
   - icon: "brands/linkedin"
-    url: "https://www.linkedin.com/in/alexjohnson/"
-  - icon: "brands/x"
-    url: "https://x.com/alexjohnson"
+    url: "https://www.linkedin.com/in/ruotongg724/"
 interests:
-  - "Web Development"
-  - "Cloud Architecture"
-  - "Open Source"
-  - "Developer Experience"
+  - "Assistive Technology"
+  - "Participatory Design"
+  - "Cross-Ability Collaboration"
 education:
   - degree: "B.S. Computer Science"
     institution: "State University"
