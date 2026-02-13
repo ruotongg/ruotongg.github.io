@@ -86,7 +86,7 @@ sections:
           company_url: ''
           company_logo: ''
           location: San Francisco, CA
-          date: '2023-01-01
+          date: '2023-01-01'
           description: |2-
             * Lead development of microservices architecture serving 1M+ users
             * Improved API response time by 40% through optimization
