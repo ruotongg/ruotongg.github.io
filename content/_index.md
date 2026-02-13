@@ -73,32 +73,13 @@ sections:
   #     show_read_more: false
   
   
-  # News
+  # News (items come from content/news/ folder)
   - block: news
     id: news
     content:
       title: Recent News
       subtitle: Recent updates and announcements
-      count: 2
-      items:
-        - date: '2023-01-01'
-          description: |2-
-            * Lead development of microservices architecture serving 1M+ users
-            * Improved API response time by 40% through optimization
-            * Mentored team of 5 junior developers
-            * Tech stack: React, Node.js, PostgreSQL, AWS
-        - date: '2022-12-31'
-          description: |2-
-            * Built and deployed 3 production applications from scratch
-            * Implemented CI/CD pipeline reducing deployment time by 60%
-            * Collaborated with design team on UI/UX improvements
-            * Tech stack: Next.js, Express, MongoDB, Docker
-        - date: '2020-01-01'
-          description: |2-
-            * Developed client websites using modern web technologies
-            * Maintained and updated legacy codebases
-            * Participated in code reviews and agile ceremonies
-            * Tech stack: React, WordPress, PHP, MySQL
+      count: 5
       archive:
         link: "/news/"
         text: "Browse All News"
