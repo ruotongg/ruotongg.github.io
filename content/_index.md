@@ -79,7 +79,7 @@ sections:
     content:
       title: Recent News
       subtitle: Recent updates and announcements
-      count: 5
+      count: 2
       archive:
         link: "/news/"
         text: "Browse All News"
