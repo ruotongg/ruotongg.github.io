@@ -26,18 +26,6 @@ interests:
   - "Assistive Technology"
   - "Participatory Design"
   - "Cross-Ability Collaboration"
-education:
-  - degree: "B.S. Computer Science"
-    institution: "State University"
-    start: "2015-09-01"
-    end: "2019-05-31"
-    summary: "Focus on software engineering and distributed systems.
-
-      Senior project on distributed caching systems.\n"
-    button:
-      text: "View Project"
-      url: "https://github.com/alexjohnson/senior-project"
-      icon: "brands/github"
 experience:
   - role: "Senior Software Engineer"
     org: "Tech Corp"
@@ -82,8 +70,4 @@ skills:
         level: 4
       - label: "CI/CD"
         level: 5
-languages:
-  - name: "English"
-    level: 5
-    label: "Native"
 awards: []
