@@ -20,11 +20,11 @@ sections:
       show_scroll_indicator: true
       typewriter:
         enable: true
-        prefix: "I create"
+        prefix: "I research"
         strings:
-          - "full-stack web apps"
-          - "scalable APIs"
-          - "open source tools"
+          - "assistive technology for communication"
+          - "participatory design and development"
+          - "technology for cross-ability collaboration"
         type_speed: 70
         delete_speed: 40
         pause_time: 2500
@@ -79,7 +79,7 @@ sections:
     content:
       title: Recent News
       subtitle: Recent updates and announcements
-      count: 2
+      count: 3
       archive:
         link: "/news/"
         text: "Browse All News"
@@ -105,12 +105,12 @@ sections:
       buttons:
         - name: All
           tag: '*'
-        - name: Full-Stack
-          tag: Full-Stack
-        - name: Frontend
-          tag: Frontend
-        - name: Backend
-          tag: Backend
+        - name: Customization
+          tag: Custom
+        - name: Disability
+          tag: Disability
+        - name: AAC
+          tag: AAC
       default_button_index: 0
       # Archive link auto-shown if more projects exist than 'count' above
       # archive:
@@ -212,8 +212,8 @@ sections:
       text: |-
         Check my CV to learn more about my background and experience.
       button:
-        text: 'Download Resume'
-        url: uploads/resume.pdf
+        text: 'Download CV'
+        url: uploads/cv.pdf
         new_tab: true
     design:
       card:

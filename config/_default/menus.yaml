@@ -14,8 +14,8 @@ main:
   - name: Contact
     identifier: b28abf10
     url: /#contact
-    weight: 40
+    weight: 30
   - name: CV
     identifier: 825be82c
     url: /#cv
-    weight: 30
+    weight: 40
