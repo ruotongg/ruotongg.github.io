@@ -9,6 +9,14 @@ design:
   # Default section spacing
   spacing: '0'
 
+extra:
+  custom_css: |
+    <style>
+      .text-gray-600.dark\:text-gray-400.max-w-2xl.mx-auto.mb-8.text-lg.leading-relaxed {
+        margin-bottom: 3rem !important;
+      }
+    </style>
+
 sections:
   # Developer Hero - Gradient background with name, role, social, and CTAs
   - block: dev-hero
@@ -213,7 +221,7 @@ sections:
         Check my CV to learn more about my background and experience.
       button:
         text: 'Download CV'
-        url: uploads/cv.pdf
+        url: uploads/resume.pdf
         new_tab: true
     design:
       card:

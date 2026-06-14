@@ -24,3 +24,5 @@ highlights:
   - "5000+ monthly active users"
   - "Lighthouse score: 100"
 ---
+
+Exploring how people with chronic illnesses experience and negotiate crip time through arts-based, speculative design of temporal technologies.

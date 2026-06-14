@@ -1,0 +1,4 @@
+{{ $themeToggle := resources.Get "js/theme-toggle.js" }}
+{{ if $themeToggle }}
+  <script src="{{ $themeToggle.RelPermalink }}" defer></script>
+{{ end }}

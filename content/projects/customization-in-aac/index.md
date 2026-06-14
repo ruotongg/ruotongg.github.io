@@ -26,3 +26,5 @@ highlights:
   - "Processing $50k+ monthly transactions"
   - "60% faster page load vs competitors"
 ---
+
+Investigating how AAC users customize, personalize, and “hack” their communication technologies to better support their social and everyday communication needs.
